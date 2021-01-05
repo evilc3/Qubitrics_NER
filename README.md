@@ -8,33 +8,31 @@
 
 
 
+# 1. Task 3 - Key Information Extraction from Scanned Receipts
+
+    Task Description from the ICDAR website.
+
+  This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
 
 
-1. Task 3 - Key Information Extraction from Scanned Receipts
+# 2. Folder Details
 
-Task Description from the ICDAR website.
-
-This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
-
-
-2. Folder Details
-
-  1. Best Model/  : This folder contains the final best performing model.
-  2. Data_Dicts/ : This folder contains data dicts (produced in the `Data Preparation Notebook`). This contains the training and testing data. 
-  3. Resulst/ : This folder contains the .zip submission files of the best models. 
+  1. `Best Model/`  : This folder contains the final best performing model.
+  2. `Data_Dicts/` : This folder contains data dicts (produced in the `Data Preparation Notebook`). This contains the training and testing data. 
+  3. `Resulst/` : This folder contains the .zip submission files of the best models. 
   
   
-
-3. Notebooks
+# 3. Notebooks
 
 There are two notebooks in this repo. 
 
-  1. `Data Preparation Notebook` : This notebook deals with data cleaning, removing duplicates, preparing training and testing data. The output of the notebooks is stored as pickle files stored in the Data_Dicts/ folder. colab links 
+  1. `Data Preparation Notebook` : This notebook deals with data cleaning, removing duplicates, preparing training and testing data. The output of the notebooks is stored as pickle files stored in the Data_Dicts/ folder. [colab links]()
   
   2. `Modelling` Notebook : This notebook deals model creation, experimenting with Lstm and Bert models, producing the .zip files.
-  colab links.
+  [colab links](https://colab.research.google.com/drive/1p4jm0FylSIBo71nzNDpUeMCJFxRsUCEH?usp=sharing).
   
-4. Models
+
+# 4. Models
 
 There are two architectures LSTMS and Bert Models used.
 
@@ -47,7 +45,7 @@ There are two architectures LSTMS and Bert Models used.
     2. Model 2 : Training the bert model with the lstm + hidden layer. 
     
   
-5. Model Selection Criterion
+# 5. Model Selection Criterion
    There are three things considered while selecting the final model. 
    
    1. Training Time: The model which can train quickly and get desirable results is better than using a high-end approach which takes too long to train. Because while in production the models will have to be re - trained.
@@ -56,7 +54,7 @@ There are two architectures LSTMS and Bert Models used.
   
    3. Compute Resources: This parameter refers to the CPU/GPU and Ram required to train the model.
 
-6. Compare the models.
+# 6. Compare the models.
   
   
   <table>
@@ -90,15 +88,14 @@ There are two architectures LSTMS and Bert Models used.
   </tr>  
  </table>
 
-Model Selection:
+**Model Selection:**
 Final model selection : Small Lstm since the accuracy difference is only 1%  between the Deep or Big Lstm but the size (storage) difference is abt 3x and training time is also doubled. This will be a good model to deploy. 
 
 Sadly, The bert model is out of the question as the accuracy is low, size is very huge, and difficult to train on free and get desirable results on colab gpus.
 
-7. Final Conclusions.
-  
-A large part of the compitetion goes into dataset creation, cleaning, and making sure no. errors are there in the prepared dataset.  
-  
+# 7. Final Conclusions.
+1. A large amount of work goes into dataset creation, cleaning, and making sure no. errors are there in the prepared dataset.  
+2. Using Character level classification I thing has worked better then token level.
   
 
 
