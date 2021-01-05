@@ -38,10 +38,9 @@ There are two notebooks in this repo.
 
 There are two architectures LSTMS and Bert Models used.
 
-1. LSTMS 
-
- 1. A small model with 2 lstm layer and final output layer: 76 % on the leaderboard. 
- 2. A deep model with 3 lstm layers + dropout and 2 hidden layers: 77.5 % on the leaderboard
+1. LSTM 
+    1. A small model with 2 lstm layer and final output layer: 76 % on the leaderboard. 
+    2. A deep model with 3 lstm layers + dropout and 2 hidden layers: 77.5 % on the leaderboard
  
 2.  Bert Model
     1. Model 1 :  Using the pretrained bert model as an embedding with a  lstm layer. 
@@ -53,23 +52,54 @@ There are two architectures LSTMS and Bert Models used.
    
    1. Training Time: The model which can train quickly and get desirable results is better than using a high-end approach which takes too long to train. Because while in production the models will have to be re - trained.
 
-  2. Model Size : This Parameter considers the model's size (disk space occupied) by the model. A model with lower storage is considered as this also reduces the cost of the model when deployed in cloud.
+   2. Model Size : This Parameter considers the model's size (disk space occupied) by the model. A model with lower storage is considered as this also reduces the cost of the model when deployed in cloud.
   
-  3. Compute Resources: This parameter refers to the CPU/GPU and Ram required to train the model.
+   3. Compute Resources: This parameter refers to the CPU/GPU and Ram required to train the model.
 
 6. Compare the models.
+  
   
   <table>
   <tr>
   <th> Models </th>
   <th> Training Time </th>
   <th>Model Size</th>
-  <th>Compute Resources<th>
-  <th><td></td></th>
+  <th>Compute Resources</th>
+  <th>Accuracy % </th>  
+  </tr>
   <tr>
-  </table>
+    <td> LSTM Small </td>
+    <td> abt 25 min </td>
+    <td> 8 mb </td>
+    <td> Easily trained on Colab GPU T4 </td>
+    <td> 76% </td>
+  </tr>  
+  <tr>
+    <td> LSTM Big (deep) </td>
+    <td> abt 45 min </td>
+    <td> 24 mb </td>
+    <td>Easily trained on Colab GPU T4</td>
+    <td> 77% </td>
+  </tr>  
+   <tr>
+    <td> Bert Model </td>
+    <td> more than 1hr </td>
+    <td> 400 mb </td>
+    <td>Max Batch Size = 8</td>
+    <td> max 69% </td> 
+  </tr>  
+ </table>
 
-7. Final conclusions.
+Model Selection:
+Final model selection : Small Lstm since the accuracy difference is only 1%  between the Deep or Big Lstm but the size (storage) difference is abt 3x and training time is also doubled. This will be a good model to deploy. 
+
+Sadly, The bert model is out of the question as the accuracy is low, size is very huge, and difficult to train on free and get desirable results on colab gpus.
+
+7. Final Conclusions.
+  
+A large part of the compitetion goes into dataset creation, cleaning, and making sure no. errors are there in the prepared dataset.  
+  
+  
 
 
 
