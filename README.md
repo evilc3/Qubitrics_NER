@@ -8,7 +8,7 @@
 
     Task Description from the ICDAR website.
 
-  This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
+    This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
 
 
 ## 2. Folder Details
@@ -22,7 +22,7 @@
 
 There are two notebooks in this repo. 
 
-  1. `Data Preparation Notebook` : This notebook deals with data cleaning, removing duplicates, preparing training and testing data. The output of the notebooks is stored as pickle files stored in the Data_Dicts/ folder. [colab links]()
+  1. `Data Preparation Notebook` : This notebook deals with data cleaning, removing duplicates, preparing training and testing data. The output of the notebooks is stored as pickle files stored in the Data_Dicts/ folder. [colab links](https://colab.research.google.com/drive/1-xvLu_5MtFwfsmK_iWc1Yci8w2Kv9EzH?usp=sharing)
   
   2. `Modelling` Notebook : This notebook deals model creation, experimenting with Lstm and Bert models, producing the .zip files.
   [colab links](https://colab.research.google.com/drive/1p4jm0FylSIBo71nzNDpUeMCJFxRsUCEH?usp=sharing).
