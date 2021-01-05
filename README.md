@@ -1,14 +1,14 @@
 # Qubitrics_NER
 
 # Leaderboard Score
-[](images/results.)
+![](Images/best_result.png)
 
 
 ## 1. Task 3 - Key Information Extraction from Scanned Receipts
 
-    Task Description from the ICDAR website.
+**Task Description from the ICDAR website.**
 
-    This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
+This task aims to extract texts of several key fields from given receipts and save the texts for each receipt image in a JSON file with the format shown in Figure 3. Participants will be asked to submit a zip file containing results for all test invoice images. 
 
 
 ## 2. Folder Details
