@@ -4,6 +4,27 @@
 ![](Images/best_result.png)
 
 
+### Best Model Description:
+
+Name : Lstm Deep  
+This is the model with the highest accuracy it uses 3 bi - directional lstm layers with dropout to reduce overfitting. The model gets about 77% on the test set.
+
+Model : Architecture 
+
+```pytorch
+LstmModelDeep(
+  (embed): Embedding(70, 16)
+  (lstm): LSTM(16, 256, num_layers=3, dropout=0.5, bidirectional=True)
+  (linear1): Linear(in_features=512, out_features=128, bias=True)
+  (linear2): Linear(in_features=128, out_features=5, bias=True)
+  (relu): ReLU()
+)
+```
+
+
+
+
+
 ## 1. Task 3 - Key Information Extraction from Scanned Receipts
 
 **Task Description from the ICDAR website.**
@@ -42,15 +63,15 @@ There are two architectures LSTMS and Bert Models used.
     
   
 ## 5. Model Selection Criterion
-   There are three things considered while selecting the final model. 
+   There are **three** things considered while selecting the final model. 
    
-   1. Training Time: The model which can train quickly and get desirable results is better than using a high-end approach which takes too long to train. Because while in production the models will have to be re - trained.
+   1. **Training Time**: The model which can train quickly and get desirable results is better than using a high-end approach which takes too long to train. Because while in production the models will have to be re - trained.
 
-   2. Model Size : This Parameter considers the model's size (disk space occupied) by the model. A model with lower storage is considered as this also reduces the cost of the model when deployed in cloud.
+   2. **Model Size** : This Parameter considers the model's size (disk space occupied) by the model. A model with lower storage is considered as this also reduces the cost of the model when deployed in cloud.
   
-   3. Compute Resources: This parameter refers to the CPU/GPU and Ram required to train the model.
+   3. **Compute Resources**: This parameter refers to the CPU/GPU and Ram required to train the model.
 
-## 6. Compare the models.
+## 6. Comparing the models.
   
   
   <table>
@@ -87,12 +108,13 @@ There are two architectures LSTMS and Bert Models used.
 **Model Selection:**
 Final model selection : Small Lstm since the accuracy difference is only 1%  between the Deep or Big Lstm but the size (storage) difference is abt 3x and training time is also doubled. This will be a good model to deploy. 
 
-Sadly, The bert model is out of the question as the accuracy is low, size is very huge, and difficult to train on free and get desirable results on colab gpus.
+Sadly, The bert model is out of the question as the accuracy is low, size is very huge, and difficult to train on free and get desirable results on colab gpu.
 
 ## 7. Final Conclusions.
 1. A large amount of work goes into dataset creation, cleaning, and making sure no. errors are there in the prepared dataset.  
 2. Using Character level classification I thing has worked better then token level.
   
 
+Thank you for giving me this opportunity hoping to hear back from you :) 
 
 
