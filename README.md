@@ -4,14 +4,15 @@
 ![](Images/best_result.png)
 
 
-### Best Model Description:
+### Model Description:
 
 Name : Lstm Deep  
-This is the model with the highest accuracy it uses 3 bi - directional lstm layers with dropout to reduce overfitting. The model gets about 77% on the test set.
+Score : 77.38 %
+This is the model with the highest accuracy it uses 3 bi - directional lstm layers with dropout to reduce overfitting.
 
 Model : Architecture 
 
-```pytorch
+```
 LstmModelDeep(
   (embed): Embedding(70, 16)
   (lstm): LSTM(16, 256, num_layers=3, dropout=0.5, bidirectional=True)
@@ -21,7 +22,18 @@ LstmModelDeep(
 )
 ```
 
+Name : Lstm small 
+Score : 76.15 %
 
+Model : Architecture 
+
+```
+LstmModel(
+  (embed): Embedding(70, 32)
+  (lstm): LSTM(32, 256, num_layers=2, bidirectional=True)
+  (linear): Linear(in_features=512, out_features=5, bias=True)
+)
+```
 
 
 
@@ -34,9 +46,14 @@ This task aims to extract texts of several key fields from given receipts and sa
 
 ## 2. Folder Details
 
-  1. `Best Model/`  : This folder contains the final best performing model.
+  1. `Best Model/`  : This folder contains the final best performing model. </br>
+                      File name : `model_100_std_76.pth` where 100 stands for max_epochs, std stands for standard (no scheduler) and 76 score on test set.
   2. `Data_Dicts/` : This folder contains data dicts (produced in the `Data Preparation Notebook`). This contains the training and testing data. 
-  3. `Resulst/` : This folder contains the .zip submission files of the best models. 
+  3. `Resulst/` : This folder contains the .zip submission files of the best models. There are two zip files one for each lstm model discussed above.</br>
+                   1. File name : lstm_model_small.zip  - results for the small lstm model.</br>
+                   2. File name : lstm_model_large.zip - results of the large (deep) lstm model.
+                            
+                  
   
   
 ## 3. Notebooks
