@@ -68,7 +68,7 @@ There are two notebooks in this repo.
 
 ## 4. Models
 
-There are two architectures LSTMS and Bert Models used.
+There are two architectures LSTMS and Bert Models used. Both these models have been used for sequential data by many researchers and have shown great results on nlp task. The bert model  follows self-attention arch. which has achieved state-of the art results in the last few years.
 
 1. LSTM 
     1. A small model with 2 lstm layer and final output layer: 76 % on the leaderboard. 
@@ -76,7 +76,7 @@ There are two architectures LSTMS and Bert Models used.
  
 2.  Bert Model
     1. Model 1 :  Using the pretrained bert model as an embedding with a  lstm layer. 
-    2. Model 2 : Training the bert model with the lstm + hidden layer. 
+    2. Model 2 : Training the bert model with a hidden layer. 
     
   
 ## 5. Model Selection Criterion
